@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.logo {
+    background: url(images/logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0.2rem;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.hamburger {
+    background: url(images/icon-menu.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0.25rem 0.4rem;
+    width: 2rem;
+    height: 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+    background: url(images/icon-menu-hover.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0.25rem 0.4rem;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    background: white;
+    display: none;
+}
+
+ul {
+    margin-top: 4rem;
+}
+
+.close {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: red;
+    margin-left: auto;
+    background: url(images/icon-menu-close.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(1.1);
+    background: url(images/icon-menu-close-hover.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+li {
+    list-style-type: none;
+    transition: 0.2s;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: fit-content;
+    margin: 1.5rem 0;
+    color: hsl(236, 13%, 42%);
+}
+
+li:hover {
+    color: hsl(5, 85%, 63%);
+    transform: scale(1.1);
+}
+
+.web3 {
+    width: 100%;
+    height: 18rem;
+    margin: 1.5rem 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(240, 100%, 5%);
+}
+
+.mini__div {
+    margin: 1rem 0;
+}
+
+.mini__div p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5rem;
+}
+
+button {
+    border: none;
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    background: hsl(5, 85%, 63%);
+    color: hsl(240, 100%, 5%);
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+}
+
+article {
+    background: hsl(240, 100%, 5%);
+    padding: 1rem;
+}
+
+.sub__title {
+    color: hsl(35, 77%, 62%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.sub__div1,
+.sub__div2 {
+    margin: 1.5rem 0;
+}
+
+.sub__div3 {
+    margin-top: 1.5rem;
+}
+
+h2 {
+    color: hsl(36, 100%, 99%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: max-content;
+    transition: 0.2s;
+}
+
+h2:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.sub__paragraph {
+    color: hsl(233, 8%, 79%);
+    margin: 0.5rem 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    margin: 2.5rem 0;
+}
+
+.retro,
+.laptops,
+.gaming {
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+h3 {
+    width: max-content;
+    color: hsl(240, 100%, 5%);
+}
+
+h3:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.section__img {
+    width: 6rem;
+}
+
+.retro {
+    display: flex;
+}
+
+.retro__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 1rem;
+}
+
+.retro__article p {
+    color: hsl(236, 13%, 42%);
+    margin: 0.5rem 0;
+}
+
+.laptops {
+    display: flex;
+}
+
+.laptop__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 1rem;
+}
+
+.laptop__article p {
+    color: hsl(236, 13%, 42%);
+    margin: 0.5rem 0;
+}
+
+.gaming {
+    display: flex;
+}
+
+.gaming__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 1rem;
+}
+
+.gaming__article p {
+    color: hsl(236, 13%, 42%);
+    margin: 0.5rem 0;
+}
+
+.footer__title {
+    color: hsl(5, 85%, 63%);
+}
+
+.open {
+    display: block;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        padding: 1rem 4rem;
+    }
+
+    nav {
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+
+    body {
+        padding: 2rem 4rem;
+    }
+
+    header {
+        align-items: center;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    nav {
+        position: static;
+        width: 50%;
+        height: auto;
+        background: none;
+        display: block;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    ul {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .web3 {
+        margin-top: 0;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+    footer div:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        padding: 2rem 8rem;
+    }
+
+    nav {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+
+        padding: 2rem 4rem;
+    }
+
+    nav {
+        width: 40%;
+    }
+
+    main {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2fr, 1fr);
+    }
+
+    .grid__one {
+        grid-column: 1 / 3;
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    .mini__div {
+        margin: 0;
+        width: 105%;
+    }
+
+    button {
+        margin: 1rem 0 0 0;
+    }
+
+    h2 {
+        width: fit-content;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .footer__title {
+        line-height: 1.3rem;
+    }
+
+    .retro,
+    .laptops,
+    .gaming {
+        height: 7rem;
+    }
+
+    .retro,
+    .laptops {
+        margin-right: 1.5rem;
+    }
+
+    .retro__article p,
+    .laptop__article p,
+    .gaming__article p {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .logo {
+        width: 2.5rem;
+        height: 2rem;
+    }
+
+    nav {
+        width: 38%;
+    }
+
+    .web3 {
+        height: 20rem;
+    }
+}
